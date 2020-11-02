@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="jquery-3.5.1.min.js"></script>
+<script>
+function changeActive(tabNumber) {
+	$(".page").hide();
+	$("."+tabNumber).show();
+	$(".active").attr("class", ""); // grabs the element with the class active and remove active from it
+	// $(".active#current").attr("class", ""); // 
+	$("#tab"+tabNumber).attr("class", "active"); // grabs id="#tab[home]" and adds active to class
+	$(".tablink").attr("id", "");
+	$(".tab"+tabNumber+" > a").attr("id", "current");
+}
+</script>
+  <title>Allie Lahnala</title>
+  <link rel="shortcut icon" href="img/pic.png" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+	
+	.sidebar {
+		padding-left: 12px;
+		position: relative;
+		left: 10px;
+		top: 50px;
+	}
+	.contact-card {
+		border-radius: 10px;
+		background: #E8F0EF;
+		padding-left: 12px;
+		position: relative;
+		word-break: break-all;
+
+	}
+	.links {
+		color: #EF959C;
+		letter-spacing: 0.2px;
+	}
+	.links a {
+		/* background-color: #eee; */
+		color: #EF959C;
+		display: block;
+		/* padding: 12px; */
+		text-decoration: none;
+	}
+
+	.links a:hover {
+		text-decoration: underline;
+		color: #EF959C;
+		font-weight: bold;
+		filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.161));
+	}
+
+	.links a.active {
+		color: #EF959C;
+		font-weight: bold;
+		filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.161));
+	}
+	.navigation {
+		padding-right: 12px;
+		position: relative;
+		overflow: visible;
+		text-align: right;
+		font-family: Poppins;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(26,46,53,1);
+		letter-spacing: 0.2px;
+	}
+
+	.navigation a {
+		/* background-color: #eee; */
+		color: black;
+		display: block;
+		/* padding: 12px; */
+		text-decoration: none;
+	}
+
+	.navigation a:hover {
+		text-decoration: underline;
+		filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.161));
+	}
+
+	.navigation a.active {
+		color: #EF959C;
+		font-weight: bold;
+		filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.161));
+	}
+	
+	#name {
+		text-align: right;
+		padding-right: 12px;
+		font-family: Poppins;
+		font-weight: bold;
+		font-size: 44px;
+		color: rgba(26,46,53,1);
+		letter-spacing: 0.5px;
+		word-break: keep-all;
+	}
+	.contact {
+		text-align: right;
+		font-family: Poppins;
+		font-style: normal;
+		padding-right: 12px;
+		color: rgba(26,46,53,1);
+		letter-spacing: 0.2px;
+	}
+	.page {
+		position: relative;
+		left: 12px; 
+		top: 50px;
+	}
+	.page-title {
+		position: relative;
+		/* line-height: 65px; changes where it starts, vertically */
+		/* text-align: left; */
+		font-family: Poppins;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 28px;
+		color: rgba(94,146,112,1);
+		letter-spacing: 0.2px;
+	}
+	.content-header {
+		position: relative;
+		overflow: visible;
+		text-align: left;
+		font-family: Poppins;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 69px;
+		color: rgba(26,46,53,1);
+		letter-spacing: 0.2px;
+	}
+	.content-text {
+		position: relative;
+		overflow: visible;
+
+		line-height: 30px; /* line spacing */
+		text-align: left;
+		font-family: Poppins;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(26,46,53,1);
+		letter-spacing: 0.2px;
+	}
+
+	ul.a {
+		list-style-type: circle;
+	}
+
+	</style>
+</head>
+<body style="background-color:#D9E5E4;">
+
+<div class="container-fluid">
+  <div class="row">
+	<div class="col-lg-3 sidebar">
+		<div class="contact-card">
+				<div id="name">Allie Lahnala</div>
+			<div class="media">
+				<div class="media-left">
+					<img src="img/pic.png" class="media-object" style="width:80px">
+				</div>
+				<div class="media-body">
+					
+					<div class="media contact email">
+						<div class="media-body">
+							<p class="media-heading text-right">alcllahn at umich.edu</p>
+						</div>
+						<div class="media-right media-middle">
+							<img src="img/email.png" class="media-object" style="width:18px">
+						</div>
+					</div>
+					<div class="media contact github">
+						<div class="media-body">
+							<p class="media-heading text-right">
+								<a class="links" href="https://github.com/alahnala">github.com/alahnala</a></p>
+						</div>
+						<div class="media-right media-middle">
+							<img src="img/github.png" class="media-object" style="width:18px">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="navigation">
+			<a id="tabhome" class="active" href="#home" onclick="changeActive('home')">About Me</a>
+			<a id="tabresearch" href="#research" onclick="changeActive('research')">Research</a>
+			<a id="tabactivities" href="#activities" onclick="changeActive('activities')">Activities</a>
+			<a id="tabnotes" href="#notes" onclick="changeActive('notes')">Notes</a>
+		</div>
+	
+		<!-- TODO nav bar -->
+	</div>
+	<div class="col-md-9">
+	<div class="page home">
+		<div class="page-title">
+			<span>About Me</span>
+		</div>
+
+		<div class="content-header">
+			<span>PhD Candidate</span>
+		</div>
+		
+		<div class="content-text">
+			<span>I’m advised by </span><span style="text-decoration:underline;"><a class='links' href='https://web.eecs.umich.edu/~mihalcea'>Prof. Rada Mihalcea</a></span><span> in the </span><span style="text-decoration:underline;"><a class="links" href="http://lit.eecs.umich.edu">Language & Information Technologies lab</a></span><span>.<br/>We are part of the </span><span style="text-decoration:underline;"><a href="https://ai.engin.umich.edu/" class="links">Artificial Intelligence lab</a></span><span> in the </span><span style="text-decoration:underline;">Computer Science & Engineering</span><span> department <br/>at </span><span style="text-decoration:underline;">University of Michigan</span><span>.</span>
+		</div>
+	</div>
+	<div class="page research" style="display:none;">
+		<div class="page-title">
+			<span>Research</span>
+		</div>
+
+		<div class="content-header">
+			<span>Interests</span>
+		</div>
+		
+		<div class="content-text">
+			<ul class="a">
+				<li>Conversational Behavior</li>
+				<li>Argumentation</li>
+				<li>Dialogue</li>
+			</ul>
+		</div>
+
+		<div class="content-header">
+				<span>Projects</span>
+			</div>
+			
+		<div class="content-text">
+			<ul class="a">
+				<li>Motivational Interviewing</li>
+				<li>Counselor Behavior on Reddit</li>
+				<li>Sound of Text</li>
+				<li>Polarity in Climate Change Discourse</li>
+			</ul>
+		</div>
+		<div class="content-header">
+				<span>Publications</span>
+			</div>
+			
+		<div class="content-text">
+			<ul class="a">
+				<li>Charlie Welch <b>Allison Lahnala</b>, Ver&oacute;nica P&eacute;rez-Rosas, Siqi Shen, Sarah Seraj, Larry An, Kenneth Resnicow, James Pennebaker, & Rada Mihalcea (2020). <a href="https://arxiv.org/abs/2007.03819">Expressive Interviewing: A Conversational System for Coping with COVID-19</a>. In NLP COVID-19 Workshop Part 2 at EMNLP 2020. <a href="https://expressiveinterviewing.org">Website</a></li>
+			</ul>
+		</div>
+		<div class="content-header">
+				<span>Presentations</span>
+			</div>
+			
+		<div class="content-text">
+			<ul class="a">
+				<li>Sound of Text</li>
+				<li>Climate Polarity</li>
+			</ul>
+		</div>
+	</div>
+	<div class="page activities" style="display:none;">
+		<div class="page-title">
+			<span>Activities</span>
+		</div>
+
+		<div class="content-header">
+			<span>Explore CS Research</span>
+		</div>
+		
+		<div class="content-text">
+			<span>I am an organizer for ExploreCSR, a research mentorship program for undergraduates.</span>
+		</div>
+
+		<div class="content-header">
+			<span>AI Blog Editor</span>
+		</div>
+			
+		<div class="content-text">
+			<span>I am an editor for the <a class='links' href='https://ai.engin.umich.edu/blog/'>Artificial Intelligence Lab’s blog.</a></span>
+		</div>
+
+		<div class="content-header">
+			<span>Music</span>
+		</div>
+			
+		<div class="content-text">
+			<span>I am a violinist, playing solo in my apartment during the pandemic. In regular times, I play with the Life Sciences Orchestra and with Campus Philharmonia Orchestra as principal second violinist.</span>
+		</div>
+	</div>
+	<div class="page notes" style="display:none;">
+		<div class="page-title">
+			<span>Notes</span>
+		</div>
+
+		<div class="content-header">
+			<span>Coming soon...</span>
+		</div>
+		
+		<div class="content-text">
+			<span>I plan to share reading notes from papers I find interesting.</span>
+		</div>
+
+	</div>
+	</div>
+  </div>
+  
+</div>
+    
+</body>
+</html>
