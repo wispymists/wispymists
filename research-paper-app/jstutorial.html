@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+	function myFunction() {
+		document.getElementById("head").innerHTML = "Paragraph changed.";
+	}
+	</script>
+</head>
+<body>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p>JavaScript can change HTML attribute values.</p>
+
+<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+
+<img id="myImage" src="pic_bulboff.gif" style="width:100px">
+
+<button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p id="changestyle">JavaScript can change the style of an HTML element.</p>
+
+<button type="button" onclick="document.getElementById('changestyle').style.fontSize='35px'">Click Me!</button>
+
+<p id="hide">JavaScript can hide HTML elements.</p>
+
+<button type="button" onclick="document.getElementById('hide').style.display='none'">Click Me!</button>
+
+<p>JavaScript can show hidden HTML elements.</p>
+
+<p id="showhidden" style="display:none">Hello JavaScript!</p>
+
+<button type="button" onclick="document.getElementById('showhidden').style.display='block'">Click Me!</button>
+
+<h1>A Web Page</h1>
+<p id="head">A Paragraph</p>
+<button type="button" onclick="myFunction()">Try it</button>
+
+
+
+<h2>JavaScript in Body</h2>
+
+<p id="body">A Paragraph.</p>
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  document.getElementById("body").innerHTML = "Paragraph changed.";
+}
+</script>
+
+
+
+<h2>My First Web Page</h2>
+<p>My First Paragraph.</p>
+
+<p id="innder"></p>
+
+<script>
+document.getElementById("innder").innerHTML = 5 + 6;
+</script>
+
+
+
+<h2>The window.print() Method</h2>
+
+<p>Click the button to print the current page.</p>
+
+<button onclick="window.print()">Print this page</button>
+
+
+</body>
+</html>
